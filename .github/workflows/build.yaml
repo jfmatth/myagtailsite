@@ -41,13 +41,3 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}:${{ steps.define_version.outputs.VER }}
             ghcr.io/${{ github.repository }}:latest
-
-      - name: Build and push Dockerfile-utility image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          file: ./Dockerfile-utility
-          push: true
-          tags: |
-            ghcr.io/${{ github.repository }}-utility:${{ steps.define_version.outputs.VER }}
-            ghcr.io/${{ github.repository }}-utility:latest
