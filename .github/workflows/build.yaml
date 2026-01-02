@@ -7,7 +7,7 @@ name: build_image
 on:
   push:
     branches:
-      - 'dev'
+      - 'development'
       - 'master'
 
   workflow_dispatch:
