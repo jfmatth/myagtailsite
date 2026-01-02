@@ -1,4 +1,0 @@
-DATABASE_URL=postgres://myuser:mypassword@localhost:5432/mydb
-POSTGRES_DB=mydb
-POSTGRES_USER=myuser
-POSTGRES_PASSWORD=mypassword
