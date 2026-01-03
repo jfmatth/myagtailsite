@@ -1,0 +1,14 @@
+{{- range $name, $cfg := .Values.volumes }}
+{{- if eq $cfg.type "pvc" }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "_helm.fullname" $ }}-{{ $name }}
+spec:
+  accessModes: {{ toYaml $cfg.pvc.accessModes | nindent 4 }}
+  resources:
+    requests:
+      storage: {{ $cfg.pvc.size }}
+  storageClassName: {{ $cfg.pvc.storageClass }}
+{{- end }}
+{{- end }}
