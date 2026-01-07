@@ -7,8 +7,6 @@ First attempt at following the tutorial and then dockerizing for local and K8s u
 
 - branches of Development, used for learning or trying out stuff.  
 
-
-
 ## Building images for Podman
 We will use the build powershell script to build our image locall, need two files:
 - IMAGE - the ghcr.io path for the image  
@@ -19,7 +17,6 @@ build
 ```
 
 ## Running
-
 Wagtail ```DJANGO_SETTINGS_MODULE``` defaults to ```core\settings\dev.py```
 
 ### Locally
